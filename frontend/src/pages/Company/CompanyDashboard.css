@@ -1,0 +1,176 @@
+.company-dashboard {
+  padding: 2rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.interviews-list-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.interview-item-compact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.interview-item-compact:hover {
+  background-color: #f9fafb;
+}
+
+.interview-info h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.interview-role {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.875rem;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.interview-meta {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.interview-action {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.status-badge-sm {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-badge-sm.completed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge-sm.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge-sm.in_progress {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.empty-state-small {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #9ca3af;
+}
+
+.empty-state-small svg {
+  margin: 0 auto 0.75rem;
+}
+
+.section-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.candidates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.candidate-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+}
+
+.candidate-rank {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.candidate-info {
+  flex: 1;
+}
+
+.candidate-info h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+.candidate-role {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.score-badge {
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.quick-actions-card {
+  margin-top: 2rem;
+}
+
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.quick-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-weight: 600;
+}
+
+.quick-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

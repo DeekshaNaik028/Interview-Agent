@@ -1,0 +1,113 @@
+.interviews-management {
+  padding: 2rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  color: #6b7280;
+}
+
+.filters-section {
+  margin-bottom: 1.5rem;
+}
+
+.filters-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.interviews-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.interviews-table th {
+  text-align: left;
+  padding: 1rem;
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.interviews-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.candidate-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.candidate-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.candidate-name {
+  font-weight: 600;
+  color: #111827;
+}
+
+.candidate-email {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.progress-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progress-bar-mini {
+  width: 80px;
+  height: 6px;
+  background-color: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill-mini {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  transition: width 0.3s;
+}
+
+.progress-text-mini {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}

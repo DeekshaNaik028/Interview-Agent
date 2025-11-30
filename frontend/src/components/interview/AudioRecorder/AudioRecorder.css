@@ -1,0 +1,34 @@
+.audio-recorder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+}
+
+.audio-visualizer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.audio-level-bar {
+  flex: 1;
+  height: 8px;
+  background-color: #d1d5db;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.audio-level-fill {
+  height: 100%;
+  background-color: #3b82f6;
+  transition: width 0.1s ease-out;
+}
+
+.audio-status {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}

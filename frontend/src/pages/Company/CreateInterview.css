@@ -1,0 +1,63 @@
+.create-interview {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.create-interview-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-section-block {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.form-section-block:last-of-type {
+  border-bottom: none;
+}
+
+.form-section-block h3 {
+  margin: 0 0 0.5rem 0;
+  color: #111827;
+  font-size: 1.25rem;
+}
+
+.form-description {
+  margin: 0 0 1.5rem 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.info-card {
+  margin-top: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.info-card h4 {
+  margin: 0 0 1rem 0;
+  color: white;
+  font-size: 1.125rem;
+}
+
+.process-list {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.process-list li {
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}

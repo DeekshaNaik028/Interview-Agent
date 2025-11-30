@@ -1,0 +1,45 @@
+.interview-lobby {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+}
+
+.lobby-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.lobby-subtitle {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.setup-checklist {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  font-weight: 500;
+}
+
+.icon-success {
+  color: #10b981;
+}
+
+.icon-error {
+  color: #ef4444;
+}
+
+.lobby-actions {
+  margin-top: 2rem;
+}

@@ -1,0 +1,34 @@
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.not-found-page h1 {
+  font-size: 6rem;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+.not-found-page p {
+  font-size: 1.5rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.home-link {
+  padding: 1rem 2rem;
+  background-color: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.home-link:hover {
+  background-color: #2563eb;
+}

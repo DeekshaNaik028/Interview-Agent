@@ -1,0 +1,53 @@
+.candidates-list-page {
+  padding: 2rem;
+}
+
+.candidates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.candidate-card-header {
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.candidate-avatar-large {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0 auto 1rem;
+}
+
+.candidate-card-header h3 {
+  margin: 0;
+  color: #111827;
+}
+
+.candidate-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1rem;
+}
+
+.candidate-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.candidate-info-item svg {
+  flex-shrink: 0;
+}

@@ -1,0 +1,33 @@
+.dashboard-layout {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.dashboard-container {
+  display: flex;
+  position: relative;
+}
+
+.dashboard-main {
+  flex: 1;
+  margin-left: 250px;
+  min-height: calc(100vh - 73px);
+}
+
+@media (max-width: 768px) {
+  .dashboard-main {
+    margin-left: 0;
+  }
+}
+
+.dashboard-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+@media (max-width: 640px) {
+  .dashboard-content {
+    padding: 1rem;
+  }
+}

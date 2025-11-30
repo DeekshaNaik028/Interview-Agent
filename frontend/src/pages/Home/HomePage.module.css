@@ -1,0 +1,66 @@
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-primary-lg,
+.btn-outline-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary-lg {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-primary-lg:hover {
+  background-color: #2563eb;
+}
+
+.btn-outline-lg {
+  background-color: transparent;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+}
+
+.btn-outline-lg:hover {
+  background-color: #3b82f6;
+  color: white;
+}
