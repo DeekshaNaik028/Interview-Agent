@@ -1,6 +1,8 @@
 import firebase_admin
 from firebase_admin import credentials, firestore, storage
 from app.core.config import settings
+import json
+import os
 
 
 class FirebaseConnection:
@@ -20,7 +22,19 @@ class FirebaseConnection:
     def initialize(self):
         """Initialize Firebase Admin SDK"""
         try:
-            cred = credentials.Certificate(settings.FIREBASE_CREDENTIALS_PATH)
+            # Check if credentials are in environment variable (Railway/Production)
+            firebase_creds_env = os.getenv('FIREBASE_CREDENTIALS')
+            
+            if firebase_creds_env:
+                # Parse JSON from environment variable
+                creds_dict = json.loads(firebase_creds_env)
+                cred = credentials.Certificate(creds_dict)
+                print("✅ Using Firebase credentials from environment variable")
+            else:
+                # Use file path (local development)
+                cred = credentials.Certificate(settings.FIREBASE_CREDENTIALS_PATH)
+                print("✅ Using Firebase credentials from file")
+            
             firebase_admin.initialize_app(cred, {
                 'storageBucket': settings.FIREBASE_STORAGE_BUCKET
             })
