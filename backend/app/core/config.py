@@ -6,7 +6,7 @@ import os
 class Settings(BaseSettings):
     # Application
     APP_NAME: str = "Interview Agent System"
-    DEBUG: bool = True
+    DEBUG: bool = False
     API_VERSION: str = "v1"
     HOST: str = "0.0.0.0"
     PORT: int = 8000
@@ -17,15 +17,15 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     
     # Firebase
-    FIREBASE_CREDENTIALS_PATH: str
+    FIREBASE_CREDENTIALS_PATH: str = "./firebase-credentials.json"
     FIREBASE_STORAGE_BUCKET: str
     
     # Gemini AI
     GEMINI_API_KEY: str
-    GEMINI_MODEL: str = "gemini-2.5-flash-lite"
+    GEMINI_MODEL: str = "gemini-2.0-flash-exp"
     
-    # CORS
-    CORS_ORIGINS: str = "http://localhost:3000"
+    # CORS - Default to Vercel frontend
+    CORS_ORIGINS: str = "https://interview-agent-xi.vercel.app"
     
     # File Upload
     MAX_VIDEO_SIZE_MB: int = 500
@@ -48,6 +48,8 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
         case_sensitive = True
+        # Allow extra fields from environment
+        extra = "allow"
 
 
 settings = Settings()

@@ -24,8 +24,8 @@ export const Header = ({ onMenuToggle }) => {
             </button>
           )}
           <Link to={ROUTES.HOME} className="header-logo">
-            Interview Agent
-          </Link>
+     <img src="/logo.svg" alt="Interview Agent" style={{ height: '40px' }} />
+   </Link>
         </div>
 
         <nav className="header-nav">
