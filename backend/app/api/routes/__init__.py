@@ -2,6 +2,7 @@
 API route modules
 """
 
-from app.api.routes import auth, interview, company, candidate, docs, evaluation, question
+# Remove the circular import - don't import here
+# The modules will be imported directly in main.py
 
-__all__ = ["auth", "interview", "company", "candidate", "docs", "evaluation", "question"]
+__all__ = ["auth", "interview", "company", "candidate", "evaluation", "question"]

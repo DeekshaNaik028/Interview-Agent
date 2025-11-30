@@ -1,5 +1,6 @@
 import axiosInstance from '../axios.config';
-import { API_ENDPOINTS } from '@/utils/constants';
+import { storage } from '@/utils/storage';
+import { API_ENDPOINTS, STORAGE_KEYS } from '@/utils/constants';
 
 export const authService = {
   registerCandidate: async (data) => {

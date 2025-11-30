@@ -22,6 +22,9 @@ export const QUESTION_DIFFICULTY = {
   HARD: 'hard',
 };
 
+// Total questions in an interview
+export const TOTAL_QUESTIONS = 13;
+
 export const ROUTES = {
   HOME: '/',
   LOGIN: '/login',

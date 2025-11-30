@@ -55,10 +55,33 @@ const LoginPage = () => {
 
     try {
       setLoading(true);
+      console.log('Attempting login with:', { email: formData.email, role });
+      
       await login(formData, role);
-      // Navigation handled in login function
+      
+      // Navigation is handled in the login function via AuthContext
+      console.log('Login successful');
     } catch (err) {
-      setError(err.response?.data?.detail || 'Login failed');
+      console.error('Login error:', err);
+      
+      // Better error messages
+      let errorMessage = 'Login failed';
+      
+      if (err.response) {
+        // Server responded with error
+        errorMessage = err.response.data?.detail || err.response.data?.message || 'Invalid credentials';
+        console.error('Server error:', err.response.status, err.response.data);
+      } else if (err.request) {
+        // Request made but no response
+        errorMessage = 'Cannot connect to server. Please check if the backend is running on http://localhost:8000';
+        console.error('No response from server');
+      } else {
+        // Something else happened
+        errorMessage = err.message || 'An unexpected error occurred';
+        console.error('Unexpected error:', err.message);
+      }
+      
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }

@@ -1,7 +1,7 @@
 .sidebar {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 73px; /* Height of header */
   bottom: 0;
   width: 250px;
   background: white;
@@ -10,10 +10,12 @@
   z-index: 200;
   transform: translateX(0);
   transition: transform 0.3s ease;
+  overflow-y: auto;
 }
 
 @media (max-width: 768px) {
   .sidebar {
+    top: 0;
     transform: translateX(-100%);
   }
 
@@ -66,4 +68,52 @@
 .sidebar-link-active {
   background-color: #dbeafe;
   color: #3b82f6;
+}
+
+/* Dashboard Layout fixes */
+.dashboard-layout {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.dashboard-container {
+  display: flex;
+  position: relative;
+}
+
+.dashboard-main {
+  flex: 1;
+  margin-left: 250px;
+  min-height: calc(100vh - 73px);
+  margin-top: 73px; /* Account for fixed header */
+}
+
+@media (max-width: 768px) {
+  .dashboard-main {
+    margin-left: 0;
+  }
+}
+
+.dashboard-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+@media (max-width: 640px) {
+  .dashboard-content {
+    padding: 1rem;
+  }
+}
+
+/* Header fixes */
+.header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 73px;
 }

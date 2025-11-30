@@ -1,7 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
-from app.api.routes import auth, interview, company, candidate, docs, evaluation, question
+
+# Import routers directly instead of from __init__.py
+from app.api.routes import auth
+from app.api.routes import interview
+from app.api.routes import company
+from app.api.routes import candidate
+from app.api.routes import evaluation
+from app.api.routes import question
 
 
 # Create FastAPI app
@@ -30,7 +37,6 @@ app.include_router(interview.router, prefix=f"/api/{settings.API_VERSION}")
 app.include_router(question.router, prefix=f"/api/{settings.API_VERSION}")
 app.include_router(evaluation.router, prefix=f"/api/{settings.API_VERSION}")
 app.include_router(company.router, prefix=f"/api/{settings.API_VERSION}")
-app.include_router(docs.router, prefix=f"/api/{settings.API_VERSION}")
 
 
 @app.get("/")
