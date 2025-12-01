@@ -22,16 +22,16 @@ class FirebaseConnection:
     def initialize(self):
         """Initialize Firebase Admin SDK"""
         try:
-            # Check if credentials are in environment variable (Railway/Production)
+            # Check for environment variable first (Production)
             firebase_creds_env = os.getenv('FIREBASE_CREDENTIALS')
             
             if firebase_creds_env:
                 # Parse JSON from environment variable
                 creds_dict = json.loads(firebase_creds_env)
                 cred = credentials.Certificate(creds_dict)
-                print("✅ Using Firebase credentials from environment variable")
+                print("✅ Using Firebase credentials from environment")
             else:
-                # Use file path (local development)
+                # Use file path (Local development)
                 cred = credentials.Certificate(settings.FIREBASE_CREDENTIALS_PATH)
                 print("✅ Using Firebase credentials from file")
             
